@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Data for {{ city }}</title>
+</head>
+<body>
+    <h1>Weather Data for {{ city }}</h1>
+    <p>Average Temperature: {{ average_temperature }}°C</p>
+
+    <h2>Extreme Weather Alert: {{ extreme_alert }}</h2>
+
+    <h3>Recent Data:</h3>
+    <ul>
+        {% for data in recent_data %}
+            <li>{{ data.timestamp }} - Temp: {{ data.temperature }}°C, Humidity: {{ data.humidity }}%</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
